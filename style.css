@@ -1,145 +1,113 @@
-html{
-	font-size: 22px;
-	overflow-x: hidden;
-}
-body{
-	font-family: Helvetica, Arial, sans-serif;
+/*styles for entire document*/
+*{
+	font-family: Helvetica;
 	color: seashell;
+	background-color: black;
 	opacity: 0.9;
 	text-align: center;
-	background-color: black;
 }
-p{
-	padding: 10px;
-}
-a{
-	color:#daa520;
-}
-/*header section*/
-#logo{
-	height: 50px;
-	float: left;
-	margin-top:10px
-	margin-left: 10px;
-}
+/*nav bar*/
 nav{
-	diplay:flex;
-	flex-wrap: wrap;
-	postion: fixed;
-	top: 0;
 	height: 69px;
 	border-bottom: 1px solid seashell;
-	justify-content: space-between;
-	align-items: center;
-	z-index:1;
-	background-color: #000;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	font-size: 22px;
 }
-nav ul li{
-	display: inline-block;
-	margin: 16px;
+nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav li{
+	text-decoration: underline;
 	float: right;
-}
-/*mission section*/
-main .mission{
-	display: flex;
-	top: 50px;
-	margin: 0 auto;
-	max-width: 1200px;
-	height:700px;
-	background-image: url('resources/img-mission-background.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	align-items: center;
-	justify-content: center;
-}
-.mission #missionTitle{
-	width: 100%;
-	background-color: #000;
-}
-/*featured Tea section*/
-#featuredTea header{
-	width: 100%;
-	font-weight: 600;
-}
-main #featuredTea{
-	display: flex;
-	justify-content: space-evenly;
-	align-content: center;
-	flex-wrap: wrap;
-	margin: 0 auto;
-	padding-top: 80px;
-	max-width: 1000px;
-}
-figure img{
-	max-width: 300px;
-	max-height: 200px;
-}
-figure figcaption{
+	display: inline-block;
+	padding: 10px;
 	margin: 10px;
-	font-weight: 600;
 }
-/*locations section*/
-main #locations{
-	display: flex;
-	flex-wrap: nowrap;
+nav img{
+	height: 50px;
+	margin: 10px;
+	display: inline-block;
+	float: left;
+}
+/*mission*/
+body{
 	position: relative;
-	top: 50px;
-	margin: 0 auto;
-	max-width: 1200px;
-	height: 500px;
-	background-image: url('resources/img-locations-background.jpg');
-	bacground-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	top: 69px;
+}
+.mission{
+	display: inline-flex;
+	justify-content: center;
 	align-items: center;
-	justify-content: space-around;
+	height: 700px;
+	width: 1200px;
+	text-align: center;
+	color: white;
+	background-image:  url("img-mission-background.jpg");
+	background-size: cover;
+	background-position: center;
 }
-main #locations h2{
-	position: absolute;
-	top: 50px;
-}
-.locationContainer{
-	background-color: #000;
-	width: 300px;
-	height:300px;
-	margin-top: 150px;
-	margin-right:20px;
-	margin-left:20px;
-}
-/*footer section*/
-footer{
-	height:200px;
+.mission-text{
 	width: 100%;
-	padding: 50px 0;
+	text-align: center;
 }
-footer #copyright{
+/*featured-tea*/
+.featured-tea{
+	display: block;
+	margin: auto;
+	width: 1000px;
+}
+.featured-tea-images{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.featured-tea-images img{
+	height: 200px;
+	width: 300px;
+	margin: 10px;
+}
+.featured-tea h4{
+	margin: 0 auto;
+}
+/*locations*/
+.locations{
+	display: block;
+	margin: 0 auto;
+	height: 500px;
+	width: 1200px;
+	background-image:  url("img-locations-background.jpg");
+	background-color: transparent;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+}
+.locations h2{
+	background-color: transparent;
+	margin: 15px auto;
+}
+.location-addresses{
+	display: inline-block;
+	justify-content: space-around;
+	background-color: transparent;
+}
+.address-block{
+	display: inline-block;
+	width: 300px;
+	margin: 20px;
+	background-color: black;
+	opacity: 1;
+}
+/*footer*/
+.contact-info{
+	height: 200px;
+	display: block;
+	text-align: center;
+}
+.copyright{
 	text-align: left;
-	position: relative;
-	left: 20px;
+	margin: 20px;
 }
-/*screen limitations*/
-@media only screen and (max-width: 930px){
-	html{
-		font-size: 18px;
-	}
-}
-@media only screen and (max-width: 540px){
-	#logo{
-		display: none;
-	}
-	nav{
-		justify-content: center;
-	}
-	main #featuredTea{
-		flex-direction: column;
-	}
-	html{
-		font-size:13px;
-	}
-	p{
-		padding: 8px;
-	}
-}
-	
-	
